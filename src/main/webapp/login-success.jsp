@@ -11,7 +11,7 @@
 <body>
 <div>
     <h2>
-        <a href="index">go to film list</a>
+        <a href="list">go to film list</a>
     </h2>
 </div>
 <div class="container">

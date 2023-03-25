@@ -1,6 +1,7 @@
-package com.example.film001.user;
+package com.example.film001.dao;
 
-import com.example.film001.HibernateUtil;
+import com.example.film001.util.HibernateUtil;
+import com.example.film001.model.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

@@ -1,4 +1,4 @@
-package com.example.film001.user;
+package com.example.film001.model;
 
 
 import javax.persistence.*;

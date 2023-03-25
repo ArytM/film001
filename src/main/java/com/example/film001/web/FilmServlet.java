@@ -1,4 +1,7 @@
-package com.example.film001;
+package com.example.film001.web;
+
+import com.example.film001.dao.FilmDao;
+import com.example.film001.model.Film;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -7,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/index")
+@WebServlet("/")
 public class FilmServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private FilmDao filmDao;

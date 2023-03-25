@@ -9,6 +9,10 @@
 <html>
 <head>
     <title>index-list</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 </head>
 <body>
 
@@ -21,6 +25,8 @@
     <a href="new">Add new Film</a><br>
     <a href="list">List all Film</a><br>
 
+
+    <form action="index" method="post">
     <table border="2">
         <caption><h2>Список фильмов</h2></caption>
         <tr>
@@ -46,7 +52,7 @@
             </tr>
         </c:forEach>
     </table>
-
+    </form>
 </center>
 </body>
 </html>
