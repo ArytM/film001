@@ -11,7 +11,7 @@
 <body>
 <div>
     <h2>
-        <a href="list">go to film list</a>
+        <a href="index.jsp">go to main page</a>
     </h2>
 </div>
 <div class="container">

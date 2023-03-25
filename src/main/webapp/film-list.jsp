@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a href="film-form.jsp">Film-form</a><br>
+<a href="index.jsp">main page</a><br>
 <div>Login: <%=session.getAttribute("name") %> </div>
 <a href="logout">Logout</a><br>
 
@@ -27,8 +27,8 @@
 
 
     <form action="index" method="post">
-    <table border="2">
         <caption><h2>Список фильмов</h2></caption>
+    <table border="2">
         <tr>
             <th>ID</th>
             <th>Name</th>

@@ -15,8 +15,10 @@
 </head>
 <body>
 
-<a href="FilmServlet">FilmServlet</a><br>
-<a href="film-form.jsp">Film-form</a><br>
+<a href="index.jsp">main page</a><br>
+<div>Login: <%=session.getAttribute("name") %> </div>
+<a href="logout">Logout</a><br>
+
 <center>
     <a href="new">Add new Film</a><br>
     <a href="list">List all Film</a><br>
@@ -25,11 +27,12 @@
         <form action="update" method="post">
     </c:if>
     <c:if test="${film == null}">
+
     <form action="insert" method="post">
         </c:if>
 
         <table border="2">
-            <caption>
+
                 <h2>
                     <c:if test="${film !=null}">
                         Edit Film
@@ -38,7 +41,7 @@
                         Add new Film
                     </c:if>
                 </h2>
-            </caption>
+
             <c:if test="${film !=null}">
                 <input type="hidden" name="id" value="<c:out value='${film.id}' />"/>
             </c:if>
