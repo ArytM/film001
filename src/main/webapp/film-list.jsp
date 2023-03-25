@@ -1,13 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%
+    if (session.getAttribute("name") == null) {
+        response.sendRedirect("login.jsp");
+    }
+%>
 <html>
 <head>
     <title>index-list</title>
 </head>
 <body>
 
-<a href="FilmServlet">FilmServlet</a><br>
 <a href="film-form.jsp">Film-form</a><br>
+<div>Login: <%=session.getAttribute("name") %> </div>
+<a href="logout">Logout</a><br>
+
+
 <center>
     <a href="new">Add new Film</a><br>
     <a href="list">List all Film</a><br>

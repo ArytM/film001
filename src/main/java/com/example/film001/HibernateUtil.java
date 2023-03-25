@@ -1,5 +1,6 @@
 package com.example.film001;
 
+import com.example.film001.user.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -27,6 +28,7 @@ public class HibernateUtil {
                 settings.put(Environment.HBM2DDL_AUTO, "validate");
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(Film.class);
+                configuration.addAnnotatedClass(User.class);
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
                 System.out.println("hiber config ok");

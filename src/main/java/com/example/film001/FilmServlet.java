@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/")
+@WebServlet("/index")
 public class FilmServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private FilmDao filmDao;
