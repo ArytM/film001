@@ -1,25 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>login-error</title>
+    <title>Error</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 </head>
 <body>
+<a href="user-registration-form.jsp">Back to registration page</a><br>
+
 <div>
     <h2>
-        <a href="login.jsp">Try to login again</a>
+        Invalid registration information<br>
+
     </h2>
 </div>
-<div class="container">
-    <div class="row col-md-10 col-md-offset-3">
-        <div class="card card-body">
-            <h1>User error login!</h1>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
-
