@@ -1,7 +1,7 @@
-package com.film001.web;
+package com.example.film001.web;
 
-import com.film001.dao.FilmDao;
-import com.film001.model.Film;
+import com.example.film001.dao.FilmDao;
+import com.example.film001.model.Film;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -83,7 +83,7 @@ public class FilmServlet extends HttpServlet {
             throws SQLException, IOException {
         String name = request.getParameter("name");
         int year = Integer.parseInt(request.getParameter("year"));
-        int rating = Integer.parseInt(request.getParameter("rating"));
+        String rating = request.getParameter("rating");
         String comment = request.getParameter("comment");
         Film newFilm = new Film(name, year, rating, comment);
         filmDao.saveFilm(newFilm);
@@ -95,7 +95,7 @@ public class FilmServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         int year = Integer.parseInt(request.getParameter("year"));
-        int rating = Integer.parseInt(request.getParameter("rating"));
+        String rating = request.getParameter("rating");
         String comment = request.getParameter("comment");
 
         Film film = new Film(id, name, year, rating, comment);

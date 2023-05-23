@@ -1,4 +1,4 @@
-package com.film001.model;
+package com.example.film001.model;
 
 
 import javax.persistence.*;
@@ -19,7 +19,7 @@ public class Film {
     private int year;
 
     @Column(name = "rating")
-    private int rating;
+    private String rating;
 
     @Column(name = "comment")
     private String comment;
@@ -31,14 +31,14 @@ public class Film {
     public Film() {
     }
 
-    public Film(String name, int year, int rating, String comment) {
+    public Film(String name, int year, String rating, String comment) {
         this.name = name;
         this.year = year;
         this.rating = rating;
         this.comment = comment;
     }
 
-    public Film(int id, String name, int year, int rating, String comment) {
+    public Film(int id, String name, int year, String rating, String comment) {
         this.id = id;
         this.name = name;
         this.year = year;
@@ -66,11 +66,11 @@ public class Film {
         this.year = year;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 

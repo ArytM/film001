@@ -49,28 +49,28 @@
                 <th>Film name:</th>
                 <td>
                     <input type="text" name="name" size="50"
-                           value="<c:out value='${film.name}' />" required="required" />
+                           value="<c:out value='${film.name}' />">
                 </td>
             </tr>
             <tr>
                 <th>Film year:</th>
                 <td>
-                    <input type="number" name="year" size="50" min="1850" max="2040" maxlength="4"
-                           value="<c:out value='${film.year}' />" required="required" />
+                    <input type="text" name="year" size="50"
+                           value="<c:out value='${film.year}' />"/>
                 </td>
             </tr>
             <tr>
                 <th>Film rating:</th>
                 <td>
-                    <input type="number" name="rating" size="50" min="0" max="10" maxlength="2"
-                           value="<c:out value='${film.rating}' />" required="required" />
+                    <input type="text" name="rating" size="50"
+                           value="<c:out value='${film.rating}' />"/>
                 </td>
             </tr>
             <tr>
                 <th>Film comment:</th>
                 <td>
                     <input type="text" name="comment" size="50"
-                           value="<c:out value='${film.comment}' />" required="required" />
+                           value="<c:out value='${film.comment}' />"/>
                 </td>
             </tr>
             <tr>
