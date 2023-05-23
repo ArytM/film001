@@ -1,7 +1,7 @@
-package com.film001.web;
+package com.example.film001.web;
 
-import com.film001.dao.FilmDao;
-import com.film001.model.Film;
+import com.example.film001.dao.FilmDao;
+import com.example.film001.model.Film;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

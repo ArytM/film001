@@ -1,7 +1,7 @@
-package com.film001.web;
+package com.example.film001.web;
 
-import com.film001.dao.UserDao;
-import com.film001.model.User;
+import com.example.film001.dao.UserDao;
+import com.example.film001.model.User;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
