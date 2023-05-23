@@ -1,6 +1,6 @@
-package com.example.film001.web;
+package com.film001.web;
 
-import com.example.film001.dao.UserDao;
+import com.film001.dao.UserDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;

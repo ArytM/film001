@@ -1,7 +1,7 @@
-package com.example.film001.util;
+package com.film001.util;
 
-import com.example.film001.model.Film;
-import com.example.film001.model.User;
+import com.film001.model.Film;
+import com.film001.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

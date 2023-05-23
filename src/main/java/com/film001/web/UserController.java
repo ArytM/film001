@@ -1,7 +1,7 @@
-package com.example.film001.web;
+package com.film001.web;
 
-import com.example.film001.dao.UserDao;
-import com.example.film001.model.User;
+import com.film001.dao.UserDao;
+import com.film001.model.User;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -40,23 +40,23 @@ public class UserController extends HttpServlet {
         RequestDispatcher dispatcher = null;
 
         if (firstName == null || firstName.equals("")) {
-            dispatcher = request.getRequestDispatcher("error-registration-user.jsp");
+            dispatcher = request.getRequestDispatcher("user-registration-error.jsp");
             dispatcher.forward(request, response);
 
         }
 
         if (lastName == null || lastName.equals("")) {
-            dispatcher = request.getRequestDispatcher("error-registration-user.jsp");
+            dispatcher = request.getRequestDispatcher("user-registration-error.jsp");
             dispatcher.forward(request, response);
 
         }
         if (email == null || email.equals("")) {
-            dispatcher = request.getRequestDispatcher("error-registration-user.jsp");
+            dispatcher = request.getRequestDispatcher("user-registration-error.jsp");
             dispatcher.forward(request, response);
 
         }
         if (password == null || password.equals("")) {
-            dispatcher = request.getRequestDispatcher("error-registration-user.jsp");
+            dispatcher = request.getRequestDispatcher("user-registration-error.jsp");
             dispatcher.forward(request, response);
 
         }
@@ -67,12 +67,14 @@ public class UserController extends HttpServlet {
         user.setEmail(email);
         user.setPassword(password);
 
-        userDao.saveUser(user);
-
-        dispatcher = request.getRequestDispatcher("registration-success.jsp");
-        dispatcher.forward(request, response);
-
+        if (userDao.validateReg(email)) {
+            userDao.saveUser(user);
+            dispatcher = request.getRequestDispatcher("user-registration-success.jsp");
+            dispatcher.forward(request, response);
+        }else {
+            dispatcher = request.getRequestDispatcher("user-registration-error.jsp");
+            dispatcher.forward(request, response);
+        }
     }
-
-
 }
+
